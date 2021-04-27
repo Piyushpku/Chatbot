@@ -1,0 +1,6 @@
+prefix sch: <http://focu.io/schema#/>
+prefix schd: <http://focu.io/data#/>
+
+SELECT ?description WHERE {
+schd:MECH6741 sch:courseDesc ?description.
+}

@@ -1,0 +1,31 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix sch: <http://focu.io/schema#/> 
+SELECT ?course (sum(?topicCount) as ?count)
+WHERE {
+  {
+  SELECT ?course (count(*) as ?topicCount)
+  WHERE
+  { ?topic owl:sameAs <http://dbpedia.org/resource/Artificial_intelligence> .
+ 	?topic sch:coveredInCourse ?course.
+  	?lecture sch:forCourse ?course.
+  	?s rdfs:subClassOf ?lecture.
+  	?s sch:hasTopic ?topic.
+  
+  }GROUP BY ?course
+  }UNION
+  {
+  SELECT ?course (count(*) as ?topicCount)
+  WHERE
+  {
+  ?topic owl:sameAs <http://dbpedia.org/resource/Artificial_intelligence> .
+  ?topic sch:coveredInCourse ?course.
+  ?lecture sch:forCourse ?course.
+  ?lab rdfs:subClassOf ?lecture.
+  ?d rdfs:subClassOf ?lab.
+  ?d sch:hasTopic ?topic.
+  }GROUP BY ?course
+  }
+}GROUP BY ?course
+ORDER BY ?topicCount

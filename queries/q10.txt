@@ -1,0 +1,10 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix sch: <http://focu.io/schema#/>
+prefix schd: <http://focu.io/data#/>
+
+SELECT ?worksheet WHERE {
+?lecture sch:lectNumber "1"^^xsd:int.
+?lecture sch:forCourse schd:COMP6741.
+?lecture sch:hasContent ?content.
+?content sch:hasWorksheets ?worksheet.
+}

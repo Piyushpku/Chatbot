@@ -1,0 +1,171 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    
+- intent: topic_from_course
+  examples: |
+    - Which topics are covered in [COMP6741](course)?
+    - Which topics are covered in [SOEN6481](course)?
+    - Which topics are covered in [MECH6741](course)?
+ 
+- intent: link_from_course
+  examples: |
+    - What is the web link for a [COMP6741](course)?
+    - What is the web link for a [SOEN6481](course)?
+    - What is the web link for a [COEN5441](course)?
+    
+- intent: topic_from_lectureNo
+  examples: |
+    - Which topics are covered in lecture [1](number) for [COMP6741](course)?
+    - Which topics are covered in lecture [2](number) for [SOEN6481](course)?
+    
+- intent: content_from_lectureNo
+  examples: |
+    - What are contents of lecture [1](number) for [COMP6741](course)?
+    - What are contents of lecture [1](number) for [SOEN6841](course)?
+    
+- intent: content_from_labNo
+  examples: |
+    - What are contents of lab [1](number) for [COMP6741](course)?
+    - What are contents of lab [1](number) for [SOEN6841](course)?
+    
+- intent: course_from_courseNo
+  examples: |
+    - What is the name of course with [6741](number) of [COMP](subject)?
+    - What is the name of course with [6841](number) of [SOEN](subject)?
+    - What is the name of course with [6861](number) of [COEN](subject)?
+    - What is the name of course with [5482](number) of [COEN](subject)?
+    - What is the name of course with [6721](number) of [COEN](subject)?
+    - What is the name of course with [5482](number) of [MECH](subject)?
+    
+- intent: desc_from_course
+  examples: |
+    - What is course description for [COMP6741](course)?
+    - What is course description for [SOEN6841](course)?
+    - What is [SOEN6841](course) about?
+    - What is [COMP6741](course) about?
+    
+- intent: outline_from_course
+  examples: |
+    - What is the course outline for [COMP6741](course)?
+    - What is the course outline for [SOEN6841](course)?
+    
+- intent: slide_from_course
+  examples: |
+    - Give slides for lecture [1](number) for [COMP6741](course)?
+    - Give slides for lecture [2](number) for [SOEN6481](course)?
+    
+- intent: worksheet_from_course
+  examples: |
+    - Give worksheets for lecture [1](number) for [COMP6741](course)?
+    - Give worksheets for lecture [2](number) for [SOEN6481](course)?
+    
+- intent: lab_content_from_lecture
+  examples: |
+    - Give lab Content for lecture [1](number) for [COMP6741](course)?
+    - Give lab Content for lecture [2](number) for [SOEN6481](course)?
+    
+- intent: topic_from_labNo
+  examples: |
+    - Which topics are covered in lab [1](number) for [COMP6741](course)?
+    - Which topics are covered in lab [2](number) for [SOEN6481](course)?
+    
+- intent: courses_from_topic
+  examples: |
+    - Which courses cover [Expert Systems](topic)?
+    - Which courses cover [AI](topic)?
+    - Which courses cover [Alexa](topic)?
+    - Which courses cover [Siri](topic)?
+    - Which courses cover [Expert](topic)?
+    - Which courses cover [Deep Learning](topic)?
+    - Which courses cover [Knowledge Base](topic)?
+    - Which courses cover [Knowledge Graph](topic)?

@@ -1,0 +1,31 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix sch: <http://focu.io/schema#/> 
+prefix schd: <http://focu.io/data#/>
+
+SELECT ?course ?lecture ?lab ?fromoutline ?fromlecture ?fromlab
+WHERE {
+  {
+  schd:Knowledge_Graph sch:coveredInCourse ?course.
+  schd:Knowledge_Graph rdfs:label ?topic_label.
+  schd:Knowledge_Graph sch:resource ?fromoutline
+  }
+  UNION{
+  ?lecture sch:forCourse ?course.
+  ?s rdfs:subClassOf ?lecture.
+  ?s sch:hasTopic schd:Knowledge_Graph.
+  ?s sch:resource ?fromlecture.
+  }
+  UNION{
+  ?lecture sch:forCourse ?course.
+  ?lab rdfs:subClassOf ?lecture.
+  ?d rdfs:subClassOf ?lab.
+  ?d sch:hasTopic schd:Knowledge_Graph.
+  ?d sch:resource ?fromlab.
+  }
+}
+
+
+
+

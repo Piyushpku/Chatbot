@@ -1,0 +1,3 @@
+ "content" , "property" , "value" ,
+ "http://example.org/schema#/COMP6741content-lecture1" , "http://example.org/schema#/hasWorksheets" , "file:///C:/Users/Kshitij/PycharmProjects/Assignment1/src/Dataset/CoursesDataset/COMP6741/lecture/1.Intelligent_Systems_Introduction/worksheet01.pdf" ,
+ "http://example.org/schema#/COMP6741content-lecture1" , "http://example.org/schema#/hasSlides" , "file:///C:/Users/Kshitij/PycharmProjects/Assignment1/src/Dataset/CoursesDataset/COMP6741/lecture/1.Intelligent_Systems_Introduction/slides01.pdf" ,

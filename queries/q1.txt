@@ -1,0 +1,7 @@
+prefix sch: <http://focu.io/schema#/>
+prefix schd: <http://focu.io/data#/>
+
+SELECT ?topic
+WHERE {
+ ?topic sch:coveredInCourse schd:COMP6741.
+}ORDER BY(?topic)

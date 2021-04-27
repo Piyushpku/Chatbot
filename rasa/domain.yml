@@ -1,0 +1,83 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - topic_from_course
+  - link_from_course
+  - topic_from_lectureNo
+  - content_from_lectureNo
+  - content_from_labNo
+  - course_from_courseNo
+  - desc_from_course
+  - outline_from_course
+  - slide_from_course
+  - worksheet_from_course
+  - lab_content_from_lecture
+  - topic_from_labNo
+  - courses_from_topic
+  
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+  
+entities:
+  - course
+  - number
+  - subject
+  - topic
+
+slots:
+  course:
+    type: any
+    initial_value: "COMP6741"
+  number:
+    type: any
+    initial_value: "1"
+  subject:
+    type: any
+    initial_value: "initial"
+  topic:
+    type: any
+    initial_value: "Alexa"
+   
+    
+actions:
+  - topic_from_course_info1
+  - topic_from_lectureNo_info2
+  - content_from_lectureNo_info3
+  - content_from_labNo_info4
+  - link_from_course_info5
+  - course_from_courseNo_info6
+  - desc_from_course_info7
+  - outline_from_course_info8
+  - slide_from_course_info9
+  - worksheet_from_course_info10
+  - lab_content_from_lecture_info11
+  - topic_from_labNo_info15
+  - courses_from_topic_info16

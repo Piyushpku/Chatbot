@@ -1,0 +1,6 @@
+prefix sch: <http://focu.io/schema#/>
+prefix schd: <http://focu.io/data#/>
+
+SELECT ?outline WHERE {
+schd:COMP6741 sch:outline ?outline.
+}

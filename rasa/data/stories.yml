@@ -1,0 +1,121 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+  
+- story: get topic info
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: topic_from_course
+    - action: topic_from_course_info1
+    
+- story: get link info
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: link_from_course
+    - action: link_from_course_info5
+    
+- story: get topic info
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: topic_from_lectureNo
+    - action: topic_from_lectureNo_info2
+    
+- story: get contents info from lecture no
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: content_from_lectureNo
+    - action: content_from_lectureNo_info3
+   
+- story: get contents info from lab no
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: content_from_labNo
+    - action: content_from_labNo_info4
+ 
+- story: get course from course no
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: course_from_courseNo
+    - action: course_from_courseNo_info6
+    
+- story: get description from course
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: desc_from_course
+    - action: desc_from_course_info7
+    
+- story: get outline from course
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: outline_from_course
+    - action: outline_from_course_info8
+    
+- story: get slides from course
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: slide_from_course
+    - action: slide_from_course_info9
+    
+- story: get worksheets from course
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: worksheet_from_course
+    - action: worksheet_from_course_info10
+    
+- story: get lab content from lecture
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: lab_content_from_lecture
+    - action: lab_content_from_lecture_info11
+
+- story: get topic info from lab no
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: topic_from_labNo
+    - action: topic_from_labNo_info15
+    
+- story: get courses info from topic
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: courses_from_topic
+    - action: courses_from_topic_info16

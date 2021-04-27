@@ -1,0 +1,9 @@
+prefix sch: <http://focu.io/schema#/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?name
+WHERE {
+ ?course sch:number "6741"^^xsd:int.
+ ?course sch:subject "COMP"^^xsd:string.
+ ?course sch:courseName ?name.
+}
